@@ -2659,7 +2659,6 @@ input, select, textarea {
 			position: absolute;
 			left: 0;
 			top: 0;
-			background-image: url("images/overlay.png");
 			width: 100%;
 			height: 100%;
 			z-index: 1;
@@ -4341,9 +4340,20 @@ input, select, textarea {
   }
 
   p.subtitle{
-	padding-top: 1vw;
 	margin-bottom: 1vw;
 	font-size: 1.3vw;
 	font-weight: light;
 	text-align: center;
   }
+ol {
+	text-align: left;
+	list-style-position: inside;
+  }
+.center{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+	margin-bottom:1.2vw;
+	border-radius: 0.5vw;
+}

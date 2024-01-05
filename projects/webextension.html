@@ -1,14 +1,15 @@
 <!DOCTYPE HTML>
 <!--
-	Landed by HTML5 UP
+	Website made by editing Landed + Verti from HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>No Sidebar - Landed by HTML5 UP</title>
+		<title>Chrome Web Blocker Extension</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="../images/薛.png">
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 	</head>
@@ -32,25 +33,87 @@
 				<div id="main" class="wrapper style1">
 					<div class="container">
 						<header class="major">
-							<h2>Contact</h2>
-							<p>Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan</p>
+							<h2>Website Blocker Extension</h2>
+							<p><i>A Chrome extension that blocks websites with a time-limit & reminder feature</i></p>
 						</header>
 
 						<!-- Content -->
 							<section id="content">
-								<a href="#" class="image fit"><img src="../images/pic07.jpg" alt="" /></a>
-								<h3>Dolore Amet Consequat</h3>
-								<p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam cubilia adipiscing interdum aliquet aliquet placerat cubilia accumsan cep ante nullam adipiscing tortor odio. Iaculis adipiscing accumsan nascetur in cras. Lacinia placerat.</p>
-								<p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique faucibus magna adipiscing aliquet blandit nisi dolor accumsan nascetur lorem. Vis enim. Curae. Mi arcu vis aliquam ipsum non accumsan ac mi faucibus amet eu accumsan erat interdum semper accumsan. Eu sagittis tellus accumsan neque lorem penatibus in porttitor. Vivamus commodo curae. Condimentum lobortis praesent id ac lorem. Lorem vis ipsum dolor feugiat consequat dolore adipiscing.</p>
-								<h3>Sed Magna Ornare</h3>
-								<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus. In accumsan lorem nunc ultrices a ac eu accumsan ac id nullam. Nec lobortis. Faucibus. Mi commodo laoreet arcu at non mi lacinia aliquet non lobortis phasellus accumsan nascetur varius. Integer orci porttitor eu faucibus aliquet faucibus ac accumsan adipiscing accumsan odio. Ut adipiscing.</p>
-								<ul>
-									<li>Faucibus orci lobortis ac adipiscing integer.</li>
-									<li>Col accumsan arcu mi aliquet placerat.</li>
-									<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-									<li>Blandit massa non blandit tempor interdum.</li>
-									<li>Lacinia mattis arcu nascetur lobortis.</li>
-								</ul>
+								<a href="#" class="image fit"><img src="../images/cardExtension.png" alt="" /></a>
+								<h3>What's this for?</h3>
+								<p>This is a Chrome extension that helps users block websites of their choosing while maintaining flexibility, allowing them to temporarily unblock needed sites under a time-limit (+ with reminders!). 
+									<br><br> Why make this? While it's invariably true that many website blockers exist, I wanted to try the following: </p>
+								<ol>
+									<li> learn how to code one myself using HTML, CSS, JS, and the Chrome APIs</li> 
+									<li> implement some variability/adaptability to the blocking</li>  
+									<li> design the interface with custom assets and prototyping on Figma</li>
+								</ol>
+								<p>	Expanding on the second list item: In my experience, I've found it a hassle having to unblock and block on other extensions.
+									For example, YouTube is very distracting, but I often need it for learning purposes (and the extension doesn't know that).
+									If I unblock the website, the risk of falling into the rabbit-hole of recommended videos while the ban is lifted is quite high, 
+									and it's unlikely I continue to use the extension after that... 
+								</p>
+								<p>
+									That's why even though there are many extensions out there with stricter block policies, my goal was not to create a stronger restriction on users, 
+									but instead help them become more aware of where they spend their time and why. 
+									You can go on YouTube if you need, but the blocker makes sure that can't turn into a 3 hour mindless scrolling session.
+									<br><br>
+									So how does it go about doing that?
+								</p>
+								<h3>Features</h3>
+								<p>I'll go through the process of using the extension, from adding a website to requesting temporary access.</p>
+								
+								<h2>Blocking a Website</h2>
+								<p>Upon loading and unpacking the extension (which can be found <a href="https://github.com/emilyx5/website-blocking-extension/tree/main">here</a>),
+								clicking the popup lets the user add and remove websites to block.</p>
+								<img src="../images/extension/popup.gif" alt="" class="center">
+								
+								<p>Accessing any website with the blocked website's hostname will lead you to the following screen:</p>
+								<img src="../images/extension/redirect.gif" alt="" class="center">
+								<p>Clicking 'close tab' closes the current tab, while clicking proceed brings you to the next screen</p>
+								<img src="../images/extension/necessitycheck.gif" alt="" class="center">
+								<p>Choosing 'No' closes the current tab again. In most cases, your journey ends here, and you resume browsing your unblocked websites.</p>
+
+								<h2>Accessing a Blocked Website</h2>
+								<p>However, this user would very much like to use the blocked website, so they select 'Yes'' on the previous page, bringing them to the <b>scroll of reason (boom effect)</b></p>
+								<img src="../images/extension/scroll.gif" alt="" class="center">
+								<br><br>
+								<p><span class="image right"><img src="../images/extension/scroll.png" alt="" /></span>
+									Here, the user is prompted to fill out this scroll, detailing the reason for access and how long they think
+									it'll take (this is the length that the unblock will last, after which, the extension will resume blocking the website). <br>
+									<br>They are also asked how many reminders they want; these reminders are notifications reminding them of the reason they were 
+									unblocking the site. Note: the user must fill this scroll out, or they are not allowed to proceed.
+									<br><br>By making the process a little bit tedious, I wanted to make users more aware of what they planned to spend their time on. 
+									Too often have I found myself mindlessly clicking to YouTube without a goal in mind, and then coming back to reality many videos later, wondering what I was doing. 
+									It's a common tip in producitivity to always set goals before beginning a work session, and I wanted to promote that mindfulness here. </p>
+
+								<p>After filling the scroll out, the user is redirected to their original url. </p>
+								<p>(The webpage here is covered so you do not need to witness my terrible YouTube feed, but it will be normal on the user end)</p>
+								<img src="../images/extension/unblock.gif" alt="" class="center">
+								<p><br>Intermittent notifications (however many you specified) will be sent to the user (as seen on the right).
+								<span class="image right"><img src="../images/extension/notif.png" alt=""></span>
+								<br>At the end of the estimated time, the page will be refreshed and redirect you to the original block page.
+								<br>You are free to repeat the process for more time if you wish!
+								</p>
+								<h3>Design</h3>
+								<p>As mentioned above in the list, I wanted to design the interface with custom assets and try prototyping on Figma! <br>
+								I had never done either before, so it was enjoyable figuring out what worked and what didn't. <br>
+								All of the images (the wizard, scroll, etc.) were drawn using <a href="https://www.pixilart.com/draw#">https://www.pixilart.com/draw#</a>, a free online site that was
+								very convenient to use. I had never tried making pixel art, so this brief exploration was pretty fun. 
+								<br>
+								</p>
+								<p>The Figma draft prototype was also a great way to visualize the design I wanted for the extension.
+									It seems half the trouble in working with HTML and CSS is knowing what kind of design you want. 
+									By using a resource like Figma, it makes things much simpler, as you're able to drag/drop items to rearrange into a design you like and view their
+									code properties in the developer mode.
+								</p>
+								<p>
+									I've included the embed to the draft down below, though it might take a while to load, so the link to the playable prototype is also
+									<a href="https://www.figma.com/file/EhFviinLiIGe2SzhuNTTcE/Blocker-Extension?type=design&node-id=0%3A1&mode=design&t=TNjU29uB61FMJEBW-1">here</a>.
+								</p>
+								<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" class="center" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FEhFviinLiIGe2SzhuNTTcE%2FBlocker-Extension%3Ftype%3Ddesign%26node-id%3D0%253A1%26mode%3Ddesign%26t%3DTNjU29uB61FMJEBW-1" allowfullscreen></iframe>
+
+							</p>
 							</section>
 
 					</div>

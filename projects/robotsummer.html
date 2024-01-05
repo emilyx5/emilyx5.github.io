@@ -1,14 +1,16 @@
 <!DOCTYPE HTML>
 <!--
-	Landed by HTML5 UP
+	Website made by editing Landed + Verti from HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>No Sidebar - Landed by HTML5 UP</title>
+		<title>EngPhys Robot Competition</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="../images/薛.png">
+
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
 	</head>
@@ -32,25 +34,71 @@
 				<div id="main" class="wrapper style1">
 					<div class="container">
 						<header class="major">
-							<h2>Contact</h2>
-							<p>Ipsum dolor feugiat aliquam tempus sed magna lorem consequat accumsan</p>
+							<h2>Engineering Physics Robot Competition 2023</h2>
+							<p>A 6 week team project to build an autonomous driving robot!</p>
 						</header>
 
 						<!-- Content -->
 							<section id="content">
-								<a href="#" class="image fit"><img src="../images/pic07.jpg" alt="" /></a>
-								<h3>Dolore Amet Consequat</h3>
-								<p>Aliquam massa urna, imperdiet sit amet mi non, bibendum euismod est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam quam, mollis at magna consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum est. Curabitur mi justo, tincidunt vel eros ullamcorper, porta cursus justo. Cras vel neque eros. Vestibulum diam cubilia adipiscing interdum aliquet aliquet placerat cubilia accumsan cep ante nullam adipiscing tortor odio. Iaculis adipiscing accumsan nascetur in cras. Lacinia placerat.</p>
-								<p>Vestibulum diam quam, mollis at consectetur non, malesuada quis augue. Morbi tincidunt pretium interdum. Morbi mattis elementum orci, nec dictum porta cursus justo. Quisque ultricies lorem in ligula condimentum, et egestas turpis sagittis. Cras ac nunc urna. Nullam eget lobortis purus. Phasellus vitae tortor non est placerat tristique faucibus magna adipiscing aliquet blandit nisi dolor accumsan nascetur lorem. Vis enim. Curae. Mi arcu vis aliquam ipsum non accumsan ac mi faucibus amet eu accumsan erat interdum semper accumsan. Eu sagittis tellus accumsan neque lorem penatibus in porttitor. Vivamus commodo curae. Condimentum lobortis praesent id ac lorem. Lorem vis ipsum dolor feugiat consequat dolore adipiscing.</p>
-								<h3>Sed Magna Ornare</h3>
-								<p>In vestibulum massa quis arcu lobortis tempus. Nam pretium arcu in odio vulputate luctus. Suspendisse euismod lorem eget lacinia fringilla. Sed sed felis justo. Nunc sodales elit in laoreet aliquam. Nam gravida, nisl sit amet iaculis porttitor, risus nisi rutrum metus. In accumsan lorem nunc ultrices a ac eu accumsan ac id nullam. Nec lobortis. Faucibus. Mi commodo laoreet arcu at non mi lacinia aliquet non lobortis phasellus accumsan nascetur varius. Integer orci porttitor eu faucibus aliquet faucibus ac accumsan adipiscing accumsan odio. Ut adipiscing.</p>
-								<ul>
-									<li>Faucibus orci lobortis ac adipiscing integer.</li>
-									<li>Col accumsan arcu mi aliquet placerat.</li>
-									<li>Lobortis vestibulum ut magna tempor massa nascetur.</li>
-									<li>Blandit massa non blandit tempor interdum.</li>
-									<li>Lacinia mattis arcu nascetur lobortis.</li>
-								</ul>
+								<a href="#" class="image fit"><img src="../images/cardRobotComp.png" alt="" /></a>
+								<h3>The Competition</h3>
+								<p>Every year in the summer term, 2nd year Engineering Physics students take 6 weeks of 6 courses,
+									followed by a 6 week project course called ENPH 253, Introduction to Instrument Design.
+									<br><br>
+									In this course, we group up into teams of 4 and are tasked with designing and creating a fully autonomous robot
+									capable of driving around an obstacle course. The highlight of the course is at the finale, the competition where all teams
+									face off in front of a live audience.
+									<br>
+									This year's competition (and previous years) can be found on YouTube, take a look at ours
+									(we race at around 1:07:00 and 1:33:00, our robot is the one with the big smiley face bumper!).
+									Embeds don't work unfortunately due to the copyrighted music in the background, so please click on the image below to watch the video on YouTube!
+								</p>
+								<a href="https://www.youtube.com/watch?v=gXMnazr8vEo"><img src="../images/robotcomp/youtube.png" alt="" class="center"></a>
+								<h3>The Rules</h3>
+								<p>
+									Every year's competition has a different theme like Indiana Jones or Avengers, and ours was Mario Kart! 
+									The goal was simple, race around this track in the 2 minute timeframe and collect as many points as possible!
+									The courserunners (our program and lab directors) also changed the competition this year; previously only <b>one</b> robot
+									ran on the track at a time. Our competition would instead be a 1v1 race against another team's robot, so collisions were possible (though any violent tactics were quickly banned to avoid a robot bloodbath of sorts...)
+									<br><br>In the video, you can get a better look at the final track and watch the robots navigate. Here's the map we were given during our design phase (the blue rectangles are ramps up to 6" in elevation):
+								</p>
+								<img src="../images/robotcomp/competitionSurface.png" alt="">
+								<p>
+									As you might notice, there are several ways to collect points; coins on the zipline and blocks placed
+									on the track each provide +1 point. Every lap completed is +3 points. Already, there are major design choices at play,
+									as each team must decide how to best make use of the 2 minutes; prioritize item-based points, or speeding through laps?
+								</p>
+								<p>
+									There are also several methods of shortcuts possible. 
+									The main method of travel we were taught was tape following using IR sensors (TCRT5000s to be specific).
+									These can tell the robot when it is on or off tape, which, combined with PID code and the power of the 
+									Bluepill STM-32s we were provided, allow us to navigate. 
+									Some teams instead used image-recognition to navigate, others hard-coded the directions for the robot since we were allowed
+									to test on the surface. So, following the black-tape path was not required; teams could try to take the zipline and collect those coins,
+									or follow the IR sensor placed at the end of the surface to take a straight-line path past the finish line. 
+
+									More details about all the competition rules can be found <a href="https://docs.google.com/document/d/e/2PACX-1vS4bQXNVCvEt-UMX50Rsar0Wds5AqRDQToN8ABxkS7ocnluPU8JlCNRYIkiXptbHYsrAI_WKzwC9IwO/pub"> on this document</a>, if you're interested!
+								</p>
+								<h3>Our Initial Plan</h3>
+								<p>
+									During our design phase, we planned to build a robot that would drive using tape sensors, pick up blocks with a claw and jump off the ramp as a shortcut.
+									The slides to our initial proposal are below (graphics I designed with the Google Slides shapes feature, which offers surprising amounts of versatility!):
+								</p>
+								<iframe src="https://docs.google.com/presentation/d/e/2PACX-1vTMRPvUXJm-S_RnbpbSDmJUFyZBVUJcB2NKcP8IZNIeVLVuPLGVbwA05q0VOkedKMmASDOwoOAuSAzE/embed?start=false&loop=false&delayms=5000" frameborder="0" width="1440" height="839" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+								<p> <br>
+									<span class="image right"><img src="../images/robotcomp/clawPrototype.gif" alt=""></span>
+									Also seen in the slides, I made a rough claw prototype with an Arduino kit at home and also a chassis design with spare parts to get a sense of the structure layout.
+									<br><br><img src="../images/robotcomp/robotProto.png" alt="" class="center"><br>
+								</p>
+								<h2>Production</h2>
+								<p>
+									Most teams divided each member into mechanical, electrical and software roles; I took on a more mech-oriented role during production and also helped with any other tasks in between.
+									<br>
+									I worked on a CAD model of our robot alongside my teammate Daniel, who also took on the mechanical role and was responsible for designing the steering system of our robot! We used Onshape
+									and 
+									<img class="center" src="../images/robotcomp/robot360.gif" alt="">
+								</p>
 							</section>
 
 					</div>
