@@ -34,13 +34,14 @@
 				<div id="main" class="wrapper style1">
 					<div class="container">
 						<header class="major">
-							<h2>Engineering Physics Robot Competition 2023</h2>
+							<h2>🤖 Engineering Physics Robot Competition 2023 🤖</h2>
 							<p>A 6 week team project to build an autonomous driving robot!</p>
 						</header>
 
 						<!-- Content -->
 							<section id="content">
-								<a href="#" class="image fit"><img src="../images/cardRobotComp.png" alt="" /></a>
+								<h4><b>Skills: Design, Prototyping, Circuit Debugging, CAD, Soldering, Laser-cutting</b></h4>
+								<img src="../images/cardRobotComp.png" alt="" class="center">
 								<h3>The Competition</h3>
 								<p>Every year in the summer term, 2nd year Engineering Physics students take 6 weeks of 6 courses,
 									followed by a 6 week project course called ENPH 253, Introduction to Instrument Design.
@@ -48,15 +49,16 @@
 									In this course, we group up into teams of 4 and are tasked with designing and creating a fully autonomous robot
 									capable of driving around an obstacle course. The highlight of the course is at the finale, the competition where all teams
 									face off in front of a live audience.
-									<br>
-									This year's competition (and previous years) can be found on YouTube, take a look at ours
+									<br><br>
+									This year's competition (and previous years) can be found on YouTube. Take a look at ours
 									(we race at around 1:07:00 and 1:33:00, our robot is the one with the big smiley face bumper!).
 									Embeds don't work unfortunately due to the copyrighted music in the background, so please click on the image below to watch the video on YouTube!
 								</p>
 								<a href="https://www.youtube.com/watch?v=gXMnazr8vEo"><img src="../images/robotcomp/youtube.png" alt="" class="center"></a>
+								<h4>You can also scroll to  <a href="#bottom"><u>the end of this webpage</u></a> to see a gif of our robot doing a lap during a competition round!</h4>
 								<h3>The Rules</h3>
 								<p>
-									Every year's competition has a different theme like Indiana Jones or Avengers, and ours was Mario Kart! 
+									Every year's competition has a different theme like Indiana Jones or Avengers, and ours was Mario Kart! 	
 									The goal was simple, race around this track in the 2 minute timeframe and collect as many points as possible!
 									The courserunners (our program and lab directors) also changed the competition this year; previously only <b>one</b> robot
 									ran on the track at a time. Our competition would instead be a 1v1 race against another team's robot, so collisions were possible (though any violent tactics were quickly banned to avoid a robot bloodbath of sorts...)
@@ -94,11 +96,50 @@
 								<h2>Production</h2>
 								<p>
 									Most teams divided each member into mechanical, electrical and software roles; I took on a more mech-oriented role during production and also helped with any other tasks in between.
-									<br>
-									I worked on a CAD model of our robot alongside my teammate Daniel, who also took on the mechanical role and was responsible for designing the steering system of our robot! We used Onshape
-									and 
-									<img class="center" src="../images/robotcomp/robot360.gif" alt="">
+									<br> <br>
+									In the first two weeks, there was a lot of experimentation and figuring things out, as we learned to use the STM-32s and integrate the sensors and motors provided! It was definitely a step-up from our
+									<a href="servomotor.html">ENPH 259</a> labs, but a valuable learning experience as we were given ample resources and wonderful TAs who guided us when we had questions.
+									I learned to solder, tested different sensors and played around with layouts (please bear with the quality of these images; I wish I had taken much more, but things were usually too hectic to remember to snap a photo...): <br><br>
+									<span class="image left"><img src="../images/robotcomp/solder.png" alt=""></span> <img src="../images/robotcomp/breadboard.png" alt=""><span class="image right"><img src="../images/robotcomp/cardboardProto.png" alt=""></span>
+									
 								</p>
+								<p>
+									During the later weeks, I began working on a CAD model of our robot alongside my teammate Daniel, who also took on the mechanical role and was responsible for designing the steering system and wheel mounts of our robot. 
+									I worked on the CAD for the chassis levels, the layouts, claw prototype and overall assembly.
+									On the other side of things, our teammate Suds soldered all of our circuits while Howard developed and tuned the PID code for the robot's driving mechanism. <br><br>
+									<span class="image left"> <img src="../images/robotcomp/robot360.gif" alt=""></span><img src="../images/robotcomp/robotclawCAD.png" alt="" class="center">
+								</p>
+
+								<p>
+									I also learned to use the laser cutter to quickly produce parts to test with; it proved so useful that I didn't end up needing to use my machine shop access (which I had gotten for this purpose)!
+									Most of our robot is made using hardboard, 3D printed parts and nuts/bolts. Here's a photo of the robot in all its glory while I was assembling it:
+									<img src="../images/robotcomp/assembly.png" alt="" class="center">
+								</p>
+								<p>
+									It was also getting later into the competition weeks, and we could all feel time ticking away. Our driving mechanisms were looking pretty good thanks to the hard work of everyone on the team!
+									Take a look at the slow-mo video below of our robot crossing the finish line (which was also in checkered black-tape to add difficuly to our tape navigation)!
+									<video src="../images/robotcomp/robotDriving.MOV" class="center"></video>
+								</p>
+								<p>It was at this point that we decided what we had was very solid; most teams hadn't been able to complete a lap yet so we were looking very far ahead in terms of points collection. 
+									To avoid risking breaking the systems we had, we decided not to implement a block collection system (rip to the claw) or the jumping off ramp idea, as this could displace the IR sensor positions, which would heavily affect PID tuning.
+									I don't have any good photos (aside from the one below), but I also made a bumper out of a metal sheet (with a smiley face!) that was fastened with zipties to our chassis. This "bumper" helped the robot push away any blocks
+									and potential magnetic bombs without tipping them over (which would cause them to blow up) and provided some level of protection for the sensors against collisions. <br><br>
+									<img src="../images/robotcomp/bumper.png" alt="" class="center">
+
+								</p>
+								<h2 id="bottom">Results</h2>
+								<p> <span class="image left"> <img src="../images/robotcomp/final.png" alt=""></span>
+									Alas, competition day came (once again, available on YouTube <a href="https://www.youtube.com/watch?v=gXMnazr8vEo">here</a>) and the pressure was high! Our
+									robot performed wonderfully, though it eventually suffered in later rounds from the collisions with other robots (the sensors likely dropped in level, causing the PID tuning to 
+									be off after our first round). If I were to retackle this competition, I would definitely invest in more metal/acrylic parts, since they provide lots of rigidity
+									and stability, which is necessary for consistent sensor measurements!
+									<br><br>
+									I'm happy to say that our team's robot made it past the group stage and into the finals. I'm exceedingly proud of the progress
+									we made as a team and the efforts put into our robot (which we named Delicioussness Overload, because it's fun to say.. in my opinion, at least)!
+									<br><br>
+									Here's a gif of our robot doing a lap on the course!
+								</p>
+								<img src="../images/robotcomp/driving.gif" alt="" class="center">
 							</section>
 
 					</div>

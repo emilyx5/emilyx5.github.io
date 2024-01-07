@@ -1,0 +1,383 @@
+<!DOCTYPE HTML>
+<!--
+	Website made by editing Landed + Verti from HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
+-->
+<html>
+	<head>
+		<title>Motor RPM Servo Circuit</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="icon" href="../images/薛.png">
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="../assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+			<header id="header">
+				<h1 id="logo"><a href="../index.html">EX</a></h1>
+				<nav id="nav">
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../aboutme.html">About me</a></li>
+						<li><a href="../pdf/Emily Xue Resume.pdf">Resume</a></li>
+						<li><a href="../contact.html" class="button primary">Contact</a></li>
+					</ul>
+				</nav>
+			</header>
+
+			<!-- Main -->
+				<div id="main" class="wrapper style1">
+					<div class="container">
+						<header class="major">
+							<h2>⚡ Motor RPM Servo Control Loop Circuit ⚡</h2>
+							<p>A feedback control circuit to control the RPM of a motor</p>
+						</header>
+
+						<!-- Content -->
+							<section id="content">
+                                <h4><b>Skills: Circuit analysis, Debugging, Lab Documentation, Lab Equipment: Oscilloscope, Multimeter, Function Generator</b></h4>
+								<img src="../images/cardServo.png" alt="" class="center">
+							</section>
+                            <h2>The Circuit</h2>
+                            <p>
+                                During the previous weeks of our lab course, we learned about basic circuitry skills; debugging, using lab equipment (primarily the Analog Discovery 2), working with electronic components like diodes, transistors and op-amps. 
+                                <br><br>
+                                With this knowledge built up, we were tasked with constructing the following circuit: 
+                            </p>
+                            <img src="../images/servo/wholeCircuit.png" alt="" >
+                            <p>
+                                <b>A brief description of the operation:</b>
+                                <br><br>
+                                The motor (top-left of schematic) has a disc attached to it with a ten equidistant slits. These holes allow light from an LED to shine on a phototransistor during rotation, creating a clock (CLK) pulse dependent on the motor speed. A counter counts how many CLK pulses occur between the RESET pulse. 
+                                <br><br>
+                                Just before each RESET pulse, an 8 bit D-latch DAC stores the counter output and converts it to an analog signal using an R2R ladder. The resulting analog signal gets compared to an analog voltage reference signal in an error-signal amplifier, which then controls the current to the motor through a power transistor. 
+                                <br><br>
+                                We will divide circuit into 5 main components and examine each in more depth with some snippets from my final lab report submission:
+                                <br><br>
+                            </p>
+                            <h2>1. Latch and Reset Generator</h2>
+                            <p>The first part of the circuit we were tasked with building was the latch and reset generator, square wave oscillators that lets the D-latch store and reset counter outputs:</p>
+                            <img src="../images/servo/part1.png" alt="" class="center">
+                            <h3>a) "Measuring Period" Generator</h3>
+                            <p>
+                                Here, we use a Schmitt Trigger inverter and RC setup to generate a square wave pulse that we use as our "measuring period", or CLK pulse for the latch that stores our counter output. 
+                                <br><br>
+                                Oscilloscope reading using AD2:  
+                            </p>
+                            <img src="../images/servo/1a.AD2.png" alt="" class="center">
+                            <p>
+                                The input to our Schmitt Trigger is the periodic charge/discharge cycle of a capacitor in an RC circuit, which is then 'squared up' by the Schmitt Trigger due to hysteresis and inverted with another Schmitt Trigger (U1B); the voltage as the capacitor begins to discharge meets the 'low' threshold of the trigger, thus causing a 1 to 0 state change (high to low) in our output. Conversely, when the capacitor begins to charge again, we see a 0 to 1 state change. 
+                                This is later connected to the CLK input of our D-latch. 
+                            </p>
+                            <h3>b) Delay</h3>
+                            <p>
+                                Now our output from a) is fed into the latch and a delay circuit. This uses another RC circuit, as the square wave output charges and discharges a smaller capacitor and introduces a time delay relative to the original input. The larger the time constant (RC), the larger the time delay. Our output from part b) is a square pulse (thanks to another Schmitt Trigger) that has been shifted. 
+                                <br><br>
+                                Oscilloscope reading of the input square wave (blue) and the output square wave (yellow):
+                            </p>
+                            <img src="../images/servo/1b.AD2.png" alt="" class="center">
+                            <p>
+                                A delay of around 11 microseconds is observed during discharge; the left cursor covers the input rising edge while the right cursor covers the output rising edge.
+                                <br><br>
+                                The calculations for expected delays during discharging and charging can be seen here:
+                            </p>
+                            <img src="../images/servo/1b.calc.png" alt="">
+                            <h3>c) RESET Pulse Generator</h3>
+                            <p>
+                                The delayed square wave is passed through another RC circuit, this time in a high-pass filter formation (rather than low-pass, as previously seen). The capacitor this time has a value in Picofarads, making for a very small time constant and quick charge/discharge cycles.
+                                <br><br>
+                                Only at the rising edge of the delayed square wave is there a pulse, as the capacitor charges quickly, crossing the trigger threshold and changing states, before discharging quickly and changing states again, creating this small 'pulse' shape. This is originally a falling-> rising -> falling edge, but the second Schmitt Trigger reverses the polarity of the output to match our original latch polarity, and we get our reset pulse.
+                                <br><br>
+                                Oscilloscope reading of our original latch signal (undelayed) in blue, and the reset pulse in yellow. Notice the 11 microsecond delay introduced from b).
+                            </p>
+                            <img src="../images/servo/1c.AD2.png" alt="">
+                            <p>
+                                The circuit / schematic I made for the latch and reset generator:
+                            </p>
+                            <span class="image left"><img src="../images/servo/part1Circuit.png" alt=""></span> <img src="../images/servo/part1schematic.png" alt="" class="center">
+                            <br>
+                            <h2>2. Counter, D-Latch, DAC</h2>
+                            <p>
+                                This portion of the circuit counts the number of clock pulses between reset pulses, storing the result before converting it to an analog voltage value. 
+                            </p>
+                            <img src="../images/servo/part2.png" alt="" class="center">
+                            <h3>a) Counter</h3>
+                            <p>
+                                First we built an 8-bit counter that counts from 0 to 255 (2^8 - 1), testing its functionality with an input square wave signal from the AD2 and 7-segment display. In the final circuit, it counts the number of rotations during one measurement period and sends it to the D-latch to be stored.
+                                <br><br>
+                                Constructed circuit and schematic:
+                            </p>
+                            <span class="image left"><img src="../images/servo/2a.circuit.png" alt=""></span> <img src="../images/servo/2a.schematic.png" alt=""class=center>
+                            <h3>b) D-latch and DAC</h3>
+                            <p>
+                                The D-latch saves the count from our counter and sends the information to the 7-segment display and DAC. The DAC, consisting of an R2R ladder and buffer, converts the digital signal to an analog voltage reading that we can use in the rest of our circuit!
+                                <br><br>
+                                R2R ladders were explored in a previous lab, where we input a series of incrementing binary inputs to output an analog sawtooth wave. Each binary value can be said to correspond to some analog voltage, relative to whatever reference voltage is set. Our DAC will produce a constant voltage/flat analog signal for a constant speed reading. 
+                                <br><br>
+                                The buffer in the DAC helps to protect against the effects of loading from the rest of the circuit, as it mirrors the voltage and isolates its input side from its output side.
+                            </p>
+                            <span class="image left"><img src="../images/servo/2b.circuit.png" alt=""></span> <img src="../images/servo/2b.schematic.png" alt=""class=center>
+                            <p>
+                                Note: The way I have wired the counter will result in a display with reversed table values (01 is actually 10, and vice versa).
+                            </p>
+                            <h2>3. Motor Sensor and Motor Driver</h2>
+                            <p>
+                                With much of the circuit complete, we began to set up the motor itself, with the following circuit (by passing the power transistor in the final circuit as we have not yet set up the error amplifier and buffer)
+                            </p>
+                            <img src="../images/servo/part3.png" alt="" class="center">
+                            <p>
+                                I first wired the circuit without including the motor, testing the phototransistor operation when manually spinning the disc.
+                            </p>
+                            <img src="../images/servo/3a.circuit.png" alt="" class="center">
+                            <p>
+                                Oscilloscope reading of the phototransistor output as I manually spun the disc at different rates:
+                            </p>
+                            <img src="../images/servo/3a.AD2.png" alt="" class="center">
+                            <p>
+                                These are dips rather than pulses, so an inverter is used to 'flip' the signal before being sent to the counter as the CLK pulse! 
+                                <br><br>
+                                With the phototransistor confirmed to be working, I wired the rest of the motor up, let it run with a constant speed and probed the new output with the oscilloscope:
+                            </p>
+                            <img src="../images/servo/3b.AD2.png" alt="" class="center">
+                            <p>
+                                Looking as expected, so we can move on to the final section of our circuit! 
+                            </p>
+                            <h2>4. Error Signal Amplifier + Protecting Buffer</h2>
+                            <p>
+                                We can finally complete the feedback circuit by assembling the error signal amplifier, buffer and controlling power transistor, such that the speed of the motor can be controlled by a potentiometer.
+                                <br><br>
+                                The circuit schematic for this section:  
+                            </p>
+                            <img src="../images/servo/part4.png" alt="" class="center">
+                            <h3>a) Error Signal Amplifier</h3>
+                            <p>
+                                The circuit for the error signal amplifier compares the analog voltage we obtained from our DAC to a stable reference voltage that is controlled by a potentiometer. It outputs the difference between the reference/potentiometer voltage with a gain dependent on the value of the resistors in the inverting input and the non-inverting input. By varying resistance with the potentiometer, we can alter the value of the non-inverting input, thereby changing our error voltage/output. 
+                            </p>
+                            <h3>b) Protecting Buffer</h3>
+                            <p>
+                                Our amplified error signal is then fed into a protecting buffer, which uses two diodes to keep the range of voltages between 0V/GND and 5V. For inputs within the range, the diodes are reverse-biased and do not conduct. Anything above 5V causes the diodes to become forward biased, effectively shorting themselves as they allow excess current to pass through them. The same logic is applied when we have voltages below 0V, so the output is limited to the threshold voltage of the diodes.
+                                <br><br>
+                                The reason we need this buffer is to protect the MJF122 power transistor, a BJT that has a maximum Base-Emitter voltage of 5V.
+                                <br><br>
+                                With these components in place, the circuit is complete!
+                            </p>
+                            <img src="../images/servo/fullcircuit.png" alt="">
+                            <ul>
+                                <li>4.2: Latch and Reset Generator</li>
+                                <li>4.2: D-Latch and DAC</li>
+                                <li>4.4: Motor Sensor and Motor Driver</li>
+                                <li>4.5: Error Signal Amplifier and Protecting Buffer</li>
+                            </ul>
+                            <h2>Finding the Maximum RPM</h2>
+                            <p>
+                                The final question in our lab report involved finding the relationship between the voltage set, what RPM that voltage produces and what value is displayed on the 7 segment display, then finding the maximum RPM. 
+                                <br><br>
+                                To show the relationship between the set voltage and the 7 segment display, I used the potentiometers variable resistance to vary the amount of voltage going across the resistor at set increments to obtain a set of data points.
+                                <br><br>
+                                I started by finding the lowest voltage across the potentiometer that could cause the motor to rotate.
+                                <br><br>
+                                Oscilloscope reading of potentiometer voltage:
+                            </p>
+                            <img src="../images/servo/finalAD2.1.png" alt="" class="center">
+                            <p>
+                                Then, I manually incremented the voltage by 100mV, moving the cursor then adjusting the potentiometer and reading the 7-segment display. After collecting the data, I obtained the following table:
+                                <br><br>
+                                Note that the display reading has been converted to the proper place value (swapped, since mine are orginally inverted). There are 2 values for each volage level separated by a slash, since it was always flickering between two readings. I then took the average of the two hex values (we used mod 16 counter) and converted them to decimal to plot as a graph later on).
+                            </p>
+                            <table>
+                                <thead>
+                                <tr>
+                                <th>Voltage (mV)</th>
+                                <th>Display</th>
+                                <th>Avg in decimal</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                <td>620</td>
+                                <td>2/3</td>
+                                <td>2.5</td>
+                                </tr>
+                                <tr>
+                                <td>720</td>
+                                <td>A/b</td>
+                                <td>10.5</td>
+                                </tr>
+                                <tr>
+                                <td>820</td>
+                                <td>12/13</td>
+                                <td>18.5</td>
+                                </tr>
+                                <tr>
+                                <td>920</td>
+                                <td>19/1A</td>
+                                <td>25.5</td>
+                                </tr>
+                                <tr>
+                                <td>1020</td>
+                                <td>20/21</td>
+                                <td>32.5</td>
+                                </tr>
+                                <tr>
+                                <td>1120</td>
+                                <td>29/2A</td>
+                                <td>41.5</td>
+                                </tr>
+                                <tr>
+                                <td>1220</td>
+                                <td>30/31</td>
+                                <td>48.5</td>
+                                </tr>
+                                <tr>
+                                <td>1320</td>
+                                <td>38/39</td>
+                                <td>56.5</td>
+                                </tr>
+                                <tr>
+                                <td>1420</td>
+                                <td>3E/3F</td>
+                                <td>62.5</td>
+                                </tr>
+                                <tr>
+                                <td>1520</td>
+                                <td>42/43</td>
+                                <td>66.5</td>
+                                </tr>
+                                <tr>
+                                <td>1590 (MAX)</td>
+                                <td>43/44</td>
+                                <td>67.5</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <p>
+                                Plotting these results on excel and finding a best fit line, we get the following:
+                            </p>
+                            <img src="../images/servo/finalexcel.png" alt="" class="center">
+                            <p>
+                                This tells us the relationship between the set voltage and the 7segment display are relatively linear! The display is roughly proportional to around 0.0701* the set voltage (in mV).
+                                <br><br>
+                                To find the relationship btwn RPM and the display/set voltage, we must derive a formula based on the way our circuit operates. Firstly, the way we know our disc rotates is through the phototransistor, which sends signals everytime light interacts with it. This light hits it by travelling through the slit on the disc. However, there is more than one slit on the disc. Counting it shows that there are exactly 10 (apologies as I do not have a good photo) slits on the full disc.
+                                <br><br>
+                                If we rotate the disc fully once, we should expect the transistor to have reacted 10 times, as light will have travelled through each slit once. This means that for every rotation, we expect 10 signals.
+                                <br><br>
+                                But how do we measure the frequency of the rotations? This lies in our measuring period generator, or our latch output from **4.2**. If you recall, we set it (using the wavegen) to a frequency of 15Hz. This means that we take measurements eevery 1/15s. So for every measurement period, given we know how many times the disc has rotated, we will know the exact RP of our motor.
+                                <br><br>
+                                Putting this into a formula, we get:                                
+                            </p>
+                            <img src="../images/servo/finalformula.png" alt="" class="center">
+                            <p>
+                                The number of signals received is equivalent to the decimal value of our 7 segments display. With this in mind, we receive our full table:
+                            </p>
+                            <table>
+                                <thead>
+                                <tr>
+                                <th>Voltage (mV)</th>
+                                <th>Display</th>
+                                <th>Avg in decimal</th>
+                                <th>RPM</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                <td>620</td>
+                                <td>2/3</td>
+                                <td>2.5</td>
+                                <td>225</td>
+                                </tr>
+                                <tr>
+                                <td>720</td>
+                                <td>A/b</td>
+                                <td>10.5</td>
+                                <td>945</td>
+                                </tr>
+                                <tr>
+                                <td>820</td>
+                                <td>12/13</td>
+                                <td>18.5</td>
+                                <td>1665</td>
+                                </tr>
+                                <tr>
+                                <td>920</td>
+                                <td>19/1A</td>
+                                <td>25.5</td>
+                                <td>2295</td>
+                                </tr>
+                                <tr>
+                                <td>1020</td>
+                                <td>20/21</td>
+                                <td>32.5</td>
+                                <td>2925</td>
+                                </tr>
+                                <tr>
+                                <td>1120</td>
+                                <td>29/2A</td>
+                                <td>41.5</td>
+                                <td>3735</td>
+                                </tr>
+                                <tr>
+                                <td>1220</td>
+                                <td>30/31</td>
+                                <td>48.5</td>
+                                <td>4365</td>
+                                </tr>
+                                <tr>
+                                <td>1320</td>
+                                <td>38/39</td>
+                                <td>56.5</td>
+                                <td>5085</td>
+                                </tr>
+                                <tr>
+                                <td>1420</td>
+                                <td>3E/3F</td>
+                                <td>62.5</td>
+                                <td>5625</td>
+                                </tr>
+                                <tr>
+                                <td>1520</td>
+                                <td>42/43</td>
+                                <td>66.5</td>
+                                <td>5985</td>
+                                </tr>
+                                <tr>
+                                <td>1590 (MAX)</td>
+                                <td>43/44</td>
+                                <td>67.5</td>
+                                <td>6075</td>
+                                </tr>
+                                </tbody>
+                                </table>
+                            <p>This gives us our maximum RPM of around 6075 RPM and thus concludes our lab!</p>
+                                
+
+					</div>
+				</div>
+
+			<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://www.linkedin.com/in/emily-xue-889b841ba/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://github.com/emilyx5" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+					<li><a href="mailto:emily.xue31415@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</footer>
+
+	</div>
+
+	<!-- Scripts -->
+		<script src="../assets/js/jquery.min.js"></script>
+		<script src="../assets/js/jquery.scrolly.min.js"></script>
+		<script src="../assets/js/jquery.dropotron.min.js"></script>
+		<script src="../assets/js/jquery.scrollex.min.js"></script>
+		<script src="../assets/js/browser.min.js"></script>
+		<script src="../assets/js/breakpoints.min.js"></script>
+		<script src="../assets/js/util.js"></script>
+		<script src="../assets/js/main.js"></script>
+
+	</body>
+</html>
