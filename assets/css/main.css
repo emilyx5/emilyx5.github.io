@@ -4390,9 +4390,9 @@ ol {
 	justify-content: left;
 	text-align: left;
 	top: 30%;
-	transform: translate(-10%, -50%);
-	text-shadow: vw 2vw 4vw rgba(0, 0, 0, 0.7);
-	background-color: #dd657991;
+	transform: translate(-25%, -50%);
+	box-shadow: #1c1d268c;
+	background-color: #dd65798b;
 	padding: 3vw;
 	border-radius: 3vw;
 	padding-left: 3vw;
@@ -4401,8 +4401,11 @@ ol {
 
 
   .background{
-	width: 80vw;
-	height: 80vh;
+	margin: 0;
+	transform: translate(20%,10%);
+	justify-content: center;
+	width: 60vw;	
+	height: 60vh;
   }
 
   h7{
@@ -4413,3 +4416,6 @@ ol {
 	font-weight:500;
 	
   }
+
+
+
