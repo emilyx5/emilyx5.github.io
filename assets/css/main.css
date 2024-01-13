@@ -3606,10 +3606,7 @@ input, select, textarea {
 		}
 
 		#banner:after {
-			background-image: -moz-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: -webkit-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: -ms-linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
-			background-image: linear-gradient(top, rgba(23, 24, 32, 0.95), rgba(23, 24, 32, 0.95)), url("images/overlay.png");;
+			background-color: rgb(32,33,41);
 			content: '';
 			display: block;
 			height: 100%;
@@ -4401,6 +4398,7 @@ ol {
 
 
   .background{
+	z-index: -0;
 	margin: 0;
 	transform: translate(20%,10%);
 	justify-content: center;
