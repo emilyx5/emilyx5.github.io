@@ -4388,6 +4388,7 @@ ol {
 	top:10vh;
 	left:1vh;
 	width:max-content;
+	max-width: 95%;
 	text-align: left;
 	box-shadow: #1c1d268c;
 	background-color: #dd65798b;
@@ -4405,23 +4406,41 @@ ol {
   }
 
 
-  .background{
-	position: relative;
-	justify-content: center;
-	bottom: 30vw;
-	right:-20vw;
-	width:70vw;
-	height: 70vw;
-	z-index: 1;
+  @media screen and (min-width: 900px){
+	.background{
+		position: relative;
+		justify-content: center;
+		bottom: 30vw;
+		right:-20vw;
+		width:70vw;
+		height: 70vw;
+		z-index: 1;
+		
+	  }
 	
   }
+
+  @media screen and (min-width:100px) and (max-width: 899px){
+	.background{
+		position: relative;
+		justify-content: center;
+		bottom: 30vw;
+		width:100vw;
+		height: 100vw;
+		z-index: 1;
+		
+	  }
+	
+  }
+
+
 
   h7{
 	border-radius: 1vw;
 	margin: 1vw;
 	font-size: 8vw;
 	line-height: 12vw;
-	font-weight:500;
+	font-weight:900;
 	
   }
  
