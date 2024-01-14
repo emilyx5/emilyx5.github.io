@@ -3593,8 +3593,9 @@ input, select, textarea {
 		box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25);
 		min-height: 100vh;
 		position: relative;
-		text-align: center;
+		align-items: center;
 		z-index: 21;
+		overflow: hidden;
 	}
 
 		#banner:before {
@@ -3621,9 +3622,9 @@ input, select, textarea {
 			margin-right: 1%;
 			max-width: 95%;
 			padding: 6em;
-			position: relative;
+			position: absolute;
 			text-align: right;
-			vertical-align: middle;
+			vertical-align:middle;
 			z-index: 1;
 		}
 
@@ -4331,14 +4332,14 @@ input, select, textarea {
   h2.title{
 	padding-top: 3vw;
 	margin-bottom: 1vw;
-	font-size: 3vw;
+	font-size: 3em;
 	text-align: center;
 	font-style: bold;
   }
 
   p.subtitle{
-	margin-bottom: 1vw;
-	font-size: 1.3vw;
+	margin-bottom: 2vh;
+	font-size: 1.5em;
 	font-weight: light;
 	text-align: center;
   }
@@ -4384,36 +4385,46 @@ ol {
 
   .homeleft{
 	position: absolute;
-	justify-content: left;
+	top:10vh;
+	left:1vh;
+	width:max-content;
 	text-align: left;
-	top: 30%;
-	transform: translate(-25%, -50%);
 	box-shadow: #1c1d268c;
 	background-color: #dd65798b;
 	padding: 3vw;
 	border-radius: 3vw;
-	padding-left: 3vw;
 	margin: 1vw;
+	z-index:1;
+  }
+
+  .gifcontainer{
+	position: relative;
+    width: 100%;
+	top: 30vh;
+    height: 100vh;
   }
 
 
   .background{
-	z-index: -0;
-	margin: 0;
-	transform: translate(20%,10%);
+	position: relative;
 	justify-content: center;
-	width: 60vw;	
-	height: 60vh;
+	bottom: 30vw;
+	right:-20vw;
+	width:70vw;
+	height: 70vw;
+	z-index: 1;
+	
   }
 
   h7{
 	border-radius: 1vw;
 	margin: 1vw;
-	font-size: 10vw;
+	font-size: 8vw;
 	line-height: 12vw;
 	font-weight:500;
 	
   }
+ 
 
 
 
