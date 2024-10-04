@@ -9,7 +9,7 @@ const { title = 'Emily Xue' } = Astro.props as LayoutProps;
 ---
 
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth scroll-py-44" data-testid="html">
+<html lang="en" class="scroll-smooth scroll-py-44 dark" data-testid="html">
 	<head>
 		<SEO
 			title="emily's portfolio"
@@ -21,7 +21,10 @@ const { title = 'Emily Xue' } = Astro.props as LayoutProps;
 		<meta name="generator" content={Astro.generator} />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.28/build/spline-viewer.js"></script>
-
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Tenor+Sans&display=swap" rel="stylesheet">
+		</head>
 		<title>{title}</title>
 	</head>
 	<body
