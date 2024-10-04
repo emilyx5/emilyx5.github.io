@@ -1,0 +1,53 @@
+---
+import Prose from '@components/Prose.astro'
+import Layout from '@layouts/Layout.astro';
+import { type CollectionEntry, getCollection } from 'astro:content';
+import type { MarkdownHeading } from 'astro';
+import TOC from '@components/TOC.astro';
+
+// 1. Generate a new path for every collection entry
+export async function getStaticPaths() {
+  const posts = await getCollection('projects');
+
+  const headings = await Promise.all(
+    posts.map(async (post) => {
+      const data = await post.render();
+      return data.headings;
+    })
+  );
+
+  return posts.map((post,index) => ({
+    params: { slug: post.slug },
+    props: { post, headings: headings[index]}
+  }));
+}
+
+
+type Props = {
+  post: CollectionEntry<'projects'>;
+  headings: MarkdownHeading[];
+};
+
+
+// 2. For your template, you can get the entry directly from the prop
+const { post, headings } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout {...post.data} headings={headings}>
+    <Prose class="mb-10 mt-10 flex flex-col items-center justify-start lg:mb-0 h-screen lg:flex-row">
+        <br>
+        <!-- <h1>{entry.data.title}</h1> -->
+        <div class="flex flex-row">
+          <div class="flex flex-col w-full">
+            <Content />
+          </div>
+          <div class="hidden lg:block lg:pl-10">
+            <TOC headings={headings}></TOC>
+          </div>
+        </div>
+        
+
+
+    </Prose>
+</Layout>

@@ -1,0 +1,40 @@
+---
+import Navbar from '@components/Navbar.astro';
+import { SEO } from 'astro-seo';
+export interface LayoutProps {
+	title: string;
+}
+
+const { title = 'Emily Xue' } = Astro.props as LayoutProps;
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-py-44" data-testid="html">
+	<head>
+		<SEO
+			title="emily's portfolio"
+			description="a website to showcase some fun stuff!"
+		/>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.28/build/spline-viewer.js"></script>
+
+		<title>{title}</title>
+	</head>
+	<body
+		class="mx-auto max-w-screen-xl bg-white px-5 font-sans text-white dark:bg-black xs:text-[16px] md:text-[18px] dark:bg-[radial-gradient(circle_at_right,_var(--tw-gradient-stops))] from-purple to-58%"
+	>
+		<Navbar />
+		<slot />
+		<style is:global>
+			/* Improve Page speed */
+			/* https://css-tricks.com/almanac/properties/c/content-visibility/ */
+			img {
+				content-visibility: auto;
+			}
+		</style>
+	</body>
+</html>

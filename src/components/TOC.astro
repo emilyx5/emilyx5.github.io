@@ -1,0 +1,29 @@
+---
+import type { MarkdownHeading } from 'astro';
+
+interface Props {
+  headings: MarkdownHeading[];
+}
+
+const { headings } = Astro.props;
+
+const filteredHeadings = headings.filter((heading) => heading.depth <= 10);
+---
+<nav class="fixed size-fit pr-10 overflow-auto">
+    <h3 class="font-monospace">Contents</h3>
+    <ul class="border-l border-orange">
+      {
+        filteredHeadings.map((heading) => (
+          <li 
+            class="list-inside list-none"
+            style={`margin-left: ${(heading.depth-1) * 10}px;`}
+          >
+            <a href={`#${heading.slug}`} class="text-sm no-underline">
+              {heading.text}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+  

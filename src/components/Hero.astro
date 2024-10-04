@@ -1,0 +1,62 @@
+---
+import heroImage from '@assets/images/hero.png';
+import Button from '@components/ui/Button.astro';
+import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
+import SplineEmbed from '../components/Spline.jsx';
+---
+
+<section
+	data-testid="hero"
+	class="mb-10 flex h-screen flex-col-reverse items-center justify-start text-center lg:flex-row"
+>
+
+<div class=" items-right justify-right flex flex-col">
+	<div class="absolute inset-0 z-0 lg:ml-96 lg:pl-96 lg:mt-28 sm:mt-0 sm:pt-0">
+		<script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.28/build/spline-viewer.js"></script>
+		<spline-viewer
+			hint
+			loading-anim-type="none"
+			url="https://prod.spline.design/UtODXlbXEKOMzRV3/scene.splinecode"
+			class="h-full w-full"
+		></spline-viewer>
+	</div>
+</div>
+
+	<div class="h-screen mb-10 z-10 flex flex-col items-left lg:mb-30 lg:w-1/2">
+		<div>
+			<h1 class="mb-4 text-8xl">
+				<br>
+				<br>
+				<br>
+			</h1>
+			<h1 class="mb-2 font-sans items-left text-7xl text-black dark:text-white lg:text-8xl text-left">
+				Emily Xue
+			</h1>
+			<h2 class="mb-6 font-monospace items-left text-left text-md text-orange lg:text-3xl lg:mb-10">
+				engineering physics student @ ubc
+			</h2>
+		</div>
+		<div class="mb-10 flex flex-row items-center">
+			<Button style={'primary'} size={'lg'} class={'flex'} name="view" onclick="location.href='#projects'" class="font-monospace outline outline-1">view my projects</Button>
+			<a class="flex-row pl-5" href="https://github.com/emilyx5" target="_blank" rel="noopener" aria-label="github"
+			><Icon
+				class="h-8 text-black dark:text-white hover:text-orange dark:hover:text-orange md:h-10"
+				name="mdi:github"
+				size={100}
+			/></a>
+		<a class="flex-row"href="https://www.linkedin.com/in/emily-xue-889b841ba/" target="_blank" rel="noopener" aria-label="linkedin"
+			><Icon
+				class="h-8 text-black dark:text-white hover:text-orange dark:hover:text-orange md:h-10"
+				name="mdi:linkedin"
+				size={100}
+			/></a>
+		</div>
+	</div>
+
+	<div class=" h-screen w-full lg:mb-64 lg:w-1/2">
+		<br>
+		<br>
+		<br>
+	</div>
+</section>
