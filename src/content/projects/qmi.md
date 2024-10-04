@@ -4,7 +4,7 @@ title: 2D MATERIALS RESEARCH
 date: 01 / 2023
 description: nanofabrication of quantum devices using 2D materials at UBC's Quantum Matters Institute
 img_alt: project image alt text
-cover: 'src\assets\images\card\exampleDevice.png'
+cover: 'public\assets\images\card\exampleDevice.png'
 link: '/qmi'
 tags: ['2023','klayout','nanofabrication', 'cleanroom training',  'lab documentation']
 ---
@@ -28,7 +28,7 @@ The first question that arises in most people is "What is a 2D material?" Luckil
 
 <div class="flex flex-row items-center">
 <figure class="bg-white size-fit rotate-1 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\grapheneWiki.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\grapheneWiki.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">graphene (from wikipedia)!</figcaption>
 </figure>
 <p class="size-fit pl-8">
@@ -50,7 +50,7 @@ Image on the right is from: Geim, A., Grigorieva, I. Van der Waals heterostructu
 </p>
 
 <figure class="bg-white size-fit -rotate-1 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\2dmaterials.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\2dmaterials.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">a tasty, 2d sandwich</figcaption>
 </figure>
 
@@ -62,7 +62,7 @@ Why are these 2D materials (2DM) a point of interest? Turns out, the 'flat' natu
 Graphene is one of the most highly researched 2DM; its successful isolation and application by Andre Geim, Konstantin Novoselov won them the 2010 Nobel Prize in Physics. It is actually one of strongest materials in the world (if not, the strongest). Often called a 'wonder material', it also boasts incredible electrical conductivity at room temperature, and even superconductivity (in certain configurations)! 
 
 Take a look at this list from https://www.acsmaterial.com/graphene-facts on the properties of graphene:
-<img src="src\assets\images\qmi\grapheneProperties.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\grapheneProperties.png" class="bg-primary mb-1 size-fit ">
 
 
 #### Monolayer vs. Bilayer Graphene, Twisting, and the Magic Angle
@@ -77,12 +77,12 @@ The twist angle of about 1.1 ° relative to one another is known as the **magic 
 
 <div class="flex flex-row">
 <figure class="bg-white size-fit -rotate-1 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\twisted graphene.png" class="bg-primary mb-1 size-sm ">
+<img src="public\assets\images\qmi\twisted graphene.png" class="bg-primary mb-1 size-sm ">
 <figcaption class="pt-2 text-black text-md text-center">image from: _MZinchenko/Shutterstock.com_</figcaption>
 </figure>
 
 <figure class="bg-white size-fit rotate-6 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\moireWiki.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\moireWiki.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">macroscale moire effect</figcaption>
 </figure>
 </div>
@@ -112,7 +112,7 @@ Graphite itself is conducting, and will be later used as a bottom gate. A top ga
 >See the below image for an example stacking plan (where we plan which flakes to use in our device), which shows the microscope images of each layer. Note the very pale purple of the bilayer graphene and, in contrast, the darker vibrant colors of the hBN and graphite (which are considerably thicker). 
 
 <figure class="bg-white size-fit rotate-1 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\grapheneVDW example stack.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\grapheneVDW example stack.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">a stacking plan from my notebook; the 'info' row helps us find the location of our flake</figcaption>
 </figure>
 
@@ -124,12 +124,12 @@ Here's one device that was made; The dark purple is the silicon chip, the blues/
 
 <div class="flex flex-row">
 <figure class="bg-white size-fit -rotate-1 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\exampleDevice.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\exampleDevice.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">a closeup of a fabricated device; hBN (green,blue) and metal (yellow) layers visible </figcaption>
 </figure>
 
 <figure class="bg-white size-fit rotate-6 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\exampleDevice2.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\exampleDevice2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">zoomed out look at a device; large pads for wire bonding! and a bear for fun :> </figcaption>
 </figure>
 </div>
@@ -142,12 +142,12 @@ We begin with exfoliation, which was mentioned earlier! Mechanical exfoliation i
 
 <div class="flex flex-row items-center">
 <figure class="bg-white size-fit -rotate-1 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\siWafers.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\siWafers.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">sliced up silicon wafer; we fabricate on cut chips, opposite to large semiconductor companies</figcaption>
 </figure>
 
 <figure class="bg-white size-fit rotate-6 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\ingot.jpg" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\ingot.jpg" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center"> spun ingots where wafers are sliced from; image from www.shinetsu.co.jp</figcaption>
 </figure>
 </div>
@@ -159,7 +159,7 @@ We take a chunk of graphite, putting a piece of tape across it to take off an in
 
 <div class="flex flex-row items-center">
 <figure class="bg-white size-fit -rotate-1 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\graphite.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\graphite.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-lg text-center">a microscope image I took of the tape, with its graphite flakes!</figcaption>
 </figure>
 </div>
@@ -175,12 +175,12 @@ A similar mechanical exfoliation process is used when getting our hBN flakes.
 
 <div class="flex flex-row items-center">
 <figure class="bg-white size-fit rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\tapeExfol.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\tapeExfol.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">blue tape covering some chips, with visible graphite flakes </figcaption>
 </figure>
 
 <figure class="bg-white size-fit -rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\microscope.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\microscope.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">examining chips on the microscope for usable flakes</figcaption>
 </figure>
 </div>
@@ -203,11 +203,11 @@ A similar mechanical exfoliation process is used when getting our hBN flakes.
 			Note how faint these flakes look in the 20x/5x screenshots! It often takes a good chunk of time going through each chip on the microscope, as we need to closely inspect every surface for potential flakes to use, but practice makes things a lot faster over time! And I got a lot of practice...
 		<div class="flex flex-row items-center">
 		<figure class="bg-white size-fit rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-		<img src="src\assets\images\qmi\grapheneflakes.png" class="bg-primary mb-1 size-fit ">
+		<img src="public\assets\images\qmi\grapheneflakes.png" class="bg-primary mb-1 size-fit ">
 		</figure>
 
 		<figure class="bg-white size-fit -rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-		<img src="src\assets\images\qmi\grapheneflakes2.png" class="bg-primary mb-1 size-fit ">
+		<img src="public\assets\images\qmi\grapheneflakes2.png" class="bg-primary mb-1 size-fit ">
 		</figure>
 		</div>
 
@@ -217,7 +217,7 @@ A similar mechanical exfoliation process is used when getting our hBN flakes.
 	
 	Example:
 	<figure class="bg-white size-fit -rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-	<img src="src\assets\images\qmi\example hBN flakes.png" class="bg-primary mb-1 size-fit ">
+	<img src="public\assets\images\qmi\example hBN flakes.png" class="bg-primary mb-1 size-fit ">
 	</figure>
 	
 
@@ -225,11 +225,11 @@ A similar mechanical exfoliation process is used when getting our hBN flakes.
 		Some examples:
 		<div class="flex flex-row items-center">
 		<figure class="bg-white size-fit rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-		<img src="src\assets\images\qmi\graphite example flake.png" class="bg-primary mb-1 size-fit ">
+		<img src="public\assets\images\qmi\graphite example flake.png" class="bg-primary mb-1 size-fit ">
 		</figure>
 
 		<figure class="bg-white size-fit -rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-		<img src="src\assets\images\qmi\graphite flake 2.png" class="bg-primary mb-1 size-fit ">
+		<img src="public\assets\images\qmi\graphite flake 2.png" class="bg-primary mb-1 size-fit ">
 		</figure>
 		</div>
 
@@ -239,11 +239,11 @@ For hBN flakes, their thicknesses are much easier to approximate and pick becaus
 
 <div class="flex flex-row items-center">
 <figure class="bg-white size-fit rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\palette.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\palette.png" class="bg-primary mb-1 size-fit ">
 </figure>
 
 <figure class="bg-white size-fit -rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\hBN flakes for palette.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\hBN flakes for palette.png" class="bg-primary mb-1 size-fit ">
 </figure>
 </div>
 
@@ -256,11 +256,11 @@ Example (chip numbers are noted down and relative sizes are compared):
 
 <div class="flex flex-row items-center">
 <figure class="bg-white size-fit rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\example plan stack.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\example plan stack.png" class="bg-primary mb-1 size-fit ">
 </figure>
 
 <figure class="bg-white size-fit -rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\stacking example 2.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\stacking example 2.png" class="bg-primary mb-1 size-fit ">
 </figure>
 </div>
 
@@ -269,24 +269,24 @@ I prepared some graphics that might explain the process better (since I have no 
 
 We assemble every layer by first picking up our desired flake from the chip it is on; we exfoliate many chips at once, so they normally are on different ones (graphene/graphite are separate from hBN).Here is how the picking up process works (simplified):
 
-<img src="src\assets\images\qmi\stacking 1.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\stacking 1.png" class="bg-primary mb-1 size-fit ">
 
 
 This is what happens at each layer, as we pick up each 2DM, growing our stack on the stamp. However, for our twisted double bilayer graphene, we need to do some extra steps to get the proper orientation/twist angle.
 
-<img src="src\assets\images\qmi\stacking 2.png" class="bg-primary mb-1 size-fit ">
-<img src="src\assets\images\qmi\stacking 3.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\stacking 2.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\stacking 3.png" class="bg-primary mb-1 size-fit ">
 
 This concludes our stacking process, as we are left with a stack of 2DM ready to be processed and shaped into devices!
 
 <div class="flex flex-row items-center">
 <figure class="bg-white size-fit rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\example stack 1.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\example stack 1.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-xl text-center">example stack 1 </figcaption>
 </figure>
 
 <figure class="bg-white size-fit -rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\example stack 2.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\example stack 2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-xl text-center">example stack 2</figcaption>
 </figure>
 </div>
@@ -296,19 +296,19 @@ This concludes our stacking process, as we are left with a stack of 2DM ready to
 With our stack complete, we now need to 'land' it on a clean, marked silicon chip! These have etched alignment marks that are useful for locating our stacks and for designing (our next section).  The chips are examined for any dirt prior to cleaning, and are later plasma-etched in the cleanroom (a very sterile, dust-free environment)
 
 Excerpt from my lab-book:
-<img src="src\assets\images\qmi\cleaned chipp.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\cleaned chipp.png" class="bg-primary mb-1 size-fit ">
 
 The machine we use in the cleanroom is the plasma etcher, which uses plasma to remove material from the surface of our chip.
 Landing the stack is very similar to its creation; we essentially press the stamp down very rapidly onto the clean chip, which has been heated up.
 <figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\land example.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\land example.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-xl text-center">example of a stack that has been landed on a chip</figcaption>
 </figure>
 
 
 <div class="flex flex-row">
 <figure class="bg-white size-fit -rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\filmremoval.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\filmremoval.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-xl text-center">a stack soaking in IPA for a couple hours </figcaption>
 </figure>
 <p class="size-fit pl-10">
@@ -322,7 +322,7 @@ It will be used between every step from now on, as we use this film to act as ou
 
 
 <figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\example spin.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\example spin.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-center">example of a spun chip</figcaption>
 </figure>
 
@@ -333,12 +333,12 @@ With our stacks landed, cleaned and protected with a layer of film, we begin des
 Back to KLayout; we import our microscope images post spinning and take those alignment marks from before (!!) and line them up with the corresponding marks that have been imported into the application (when the clean chips were initially etched). This lets us design accurately, as it offers a way to precisely line up our designs with the actual location of the stacks.
 
 <figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\klayout example 1.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\klayout example 1.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-center">an example of a design we did for a stack</figcaption>
 </figure>
 
 <figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\klayout example 2.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\klayout example 2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-blacktext-center">(zoomed out photos; the green rectangles are our bond pads, which are connected to a contact (the blue hand shapes) allows us to read the voltage at that point in the graphene)</figcaption>
 </figure>
 
@@ -354,14 +354,14 @@ These design files are then exported in each step, starting with the top gate.
 Since we were not trained to use the JEOL machine, one of our supervisors would complete the lithography for us. Once the chip was returned and developed, leaving a stencil cut out from the PMMA film, we could head to the Dee-Director, a machine co-created by our lab head, Dr. Folk.
 
 Example:
-<img src="src\assets\images\qmi\top gate stencil.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\top gate stencil.png" class="bg-primary mb-1 size-fit ">
 
 
 The Dee-director is a machine that evaporates metal; it heats up metals to high temperatures in a vacuum environment that evaporates onto whatever is loaded in the sample holder (our chip), coating the entire surface in the metal of choosing. For our purposes, we usually use gold/chromium. 
 
 After developing and liftoff (cleaning the stencil and the excess evaporated metal off):
 
-<img src="src\assets\images\qmi\liftoff.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\liftoff.png" class="bg-primary mb-1 size-fit ">
 
 
 Hopefully this makes it clearer why we need to spin and develop our stencils; the metal will just coat everything to a desired thickness, so PMMA and lithography is used to keep the metal only on the areas we want. We clean and spin another layer of PMMA again for the next step!
@@ -371,12 +371,12 @@ With our top gate completed, we can move onto our contacts, the little arms that
 
 <div class="flex flex-row items-center">
 <figure class="bg-white size-fit rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\contact 1.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\contact 1.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-center">example contacts before metal evaporation; purple/blue is the exposed chip</figcaption>
 </figure>
 
 <figure class="bg-white size-fit -rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\contacts 2.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\contacts 2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-center">example contacts post metal evaporation with PMMA cleaned off</figcaption>
 </figure>
 </div>
@@ -388,12 +388,12 @@ Here, we etch away excess material using the plasma etcher to prevent shorting, 
 
 <div class="flex flex-row items-center">
 <figure class="bg-white size-fit rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\etch1.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\etch1.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-center">device before etching</figcaption>
 </figure>
 
 <figure class="bg-white size-fit -rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\etch 2.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\etch 2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-center">device after etching</figcaption>
 </figure>
 </div>
@@ -402,7 +402,7 @@ Here, we etch away excess material using the plasma etcher to prevent shorting, 
 Our devices are now ready for measurement (almost!). At this point, it has been several hours of nanofabrication, and we are rewarded with devices that are visible (somewhat!) to the naked eye!!!
 
 <figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\finished devices.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\finished devices.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-center">how the devices look to a phone camera</figcaption>
 </figure>
 
@@ -410,7 +410,7 @@ Our devices are now ready for measurement (almost!). At this point, it has been 
 Now, how do we measure these devices? This is a great question... we begin by connecting the bond pads (those rectangles you can see with your eyes) to a chip carrier that gets plugged into the measurement setup. 
 <div class="flex flex-row items-center">
 <figure class="bg-white size-fit rotate-1 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\wirebond wiki.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\wirebond wiki.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">wirebonding from wikipedia</figcaption>
 </figure>
 <p class="size-fit pl-8">
@@ -423,7 +423,7 @@ Image from Wikipedia article on wire bonding! Their device is much more complex,
 > Learning to use this machine (alongside the Dee Director) was one of the most tedious processes in the nanofabrication journey, as the wire would often break due to how fragile it was or fall out of the holder, requiring us to rethread it with a precision that makes regular thread and needles feel gigantic. But as with all the other things , it got easier with time and practice.
 
 <figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\bonding.png" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\bonding.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-center">wire bonding plan from notebook</figcaption>
 </figure>
 
@@ -433,7 +433,7 @@ Tested devices are then dunked into a helium dewar, allowing us to reach tempera
 
 
 <figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
-<img src="src\assets\images\qmi\measure.jpg" class="bg-primary mb-1 size-fit ">
+<img src="public\assets\images\qmi\measure.jpg" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-center">measurement setup (devices are put in the dewar on the left)</figcaption>
 </figure>
 
