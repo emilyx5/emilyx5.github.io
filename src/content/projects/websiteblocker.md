@@ -4,7 +4,7 @@ title: WEBSITE BLOCKER BROWSER EXTENSION
 date: 12 / 2023
 description: a Chrome extension that blocks websites with a time-limit & reminder feature
 img_alt: project image alt text
-cover: 'public\assets\images\card\figma.png'
+cover: '\images\card\figma.png'
 link: '/websiteblocker'
 tags: ['2023','HTML', 'CSS', 'JS', 'figma', 'design','chrome API']
 ---
@@ -33,19 +33,19 @@ I'll go through the process of using the extension, from adding a website to req
 Upon loading and unpacking the extension (which can be found <a href="https://github.com/emilyx5/website-blocking-extension" >here</a>), clicking the popup lets the user add and remove websites to block.
 
 
-<img src="public\assets\images\extension\popup.gif" class="bg-primary mb-1 size-fit outline-purple rounded-xl ">
+<img src="\images\extension\popup.gif" class="bg-primary mb-1 size-fit outline-purple rounded-xl ">
 
 
 
 Accessing any website with the blocked website's hostname will lead you to the following screen:
 
 
-<img src="public\assets\images\extension\redirect.gif" class="bg-primary mb-1 size-fit outline-purple rounded-xl ">
+<img src="\images\extension\redirect.gif" class="bg-primary mb-1 size-fit outline-purple rounded-xl ">
 
 
 Clicking 'close tab' closes the current tab, while clicking proceed brings you to the next screen
 
-<img src="public\assets\images\extension\necessitycheck.gif" class="bg-primary mb-1 size-fit outline-purple rounded-xl  ">
+<img src="\images\extension\necessitycheck.gif" class="bg-primary mb-1 size-fit outline-purple rounded-xl  ">
 
 
 
@@ -54,11 +54,11 @@ Choosing 'No' closes the current tab again. In most cases, your journey ends her
 ### Accessing a Blocked Website
 However, this user would very much like to use the blocked website, so they select 'Yes'' on the previous page, bringing them to the scroll of reason (boom effect)
 
-<img src="public\assets\images\extension\scroll.gif" class="bg-primary mb-1 size-fit outline-purple rounded-xl ">
+<img src="\images\extension\scroll.gif" class="bg-primary mb-1 size-fit outline-purple rounded-xl ">
 
 <div class="flex flex-row items-center">
 <figure class="bg-white w-1/2 rotate-0 p-6 items-center justify-center hover:scale-150">
-<img src="public\assets\images\extension\scroll.png" class="bg-primary mb-1 size-fit ">
+<img src="\images\extension\scroll.png" class="bg-primary mb-1 size-fit ">
 <figcaption>final redirect confirmation page</figcaption>
 </figure>
 
@@ -75,14 +75,14 @@ By making the process a little bit tedious, I wanted to make users more aware of
 
 After filling the scroll out, the user is redirected to their original url.
 
-<img src="public\assets\images\extension\unblock.gif" class="bg-primary mb-1 size-fit outline-purple rounded-xl ">
+<img src="\images\extension\unblock.gif" class="bg-primary mb-1 size-fit outline-purple rounded-xl ">
 
 
 Intermittent notifications (however many you specified) will be sent to the user.
 At the end of the alloted time, the page will be refreshed and redirect you to the original block page.
 You are free to repeat the process for more time if you wish!
 
-<img src="public\assets\images\extension\notif.png" class="bg-primary mb-1 size-fit outline-purple rounded-xl ">
+<img src="\images\extension\notif.png" class="bg-primary mb-1 size-fit outline-purple rounded-xl ">
 
 
 ## Design
@@ -93,7 +93,7 @@ All of the images (the wizard, scroll, etc.) were drawn using https://www.pixila
 The Figma draft prototype was also a great way to visualize the design I wanted for the extension. It seems half the trouble in working with HTML and CSS is knowing what kind of design you want. By using a resource like Figma, it makes things much simpler, as you're able to drag/drop items to rearrange into a design you like and view their code properties in the developer mode.
 
 <figure class="bg-white size-fit rotate-0 p-6 items-center justify-center hover:scale-150">
-<img src="public\assets\images\extension\figma.png" class="bg-primary mb-1 size-fit ">
+<img src="\images\extension\figma.png" class="bg-primary mb-1 size-fit ">
 <figcaption class='text-xl'>a screenshot from the figma draft</figcaption>
 </figure>
 
