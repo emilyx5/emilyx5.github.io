@@ -16,5 +16,4 @@ export default defineConfig({
     service: squooshImageService()
   },
   site: 'https://emilyx5.github.io',
-  base: '/emilyx5.github.io',
 });
