@@ -41,12 +41,10 @@
 			}
 		};
 
-		if (
-			localStorage.theme === 'dark' ||
-			(!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
-		) {
-			switchTheme();
-		}
+	    // Set dark theme by default
+	    document.documentElement.classList.add('dark');
+	    button.checked = true; // Check the button to reflect dark mode
+	    localStorage.setItem('theme', 'dark'); // Save dark mode in localStorage
 
 		button.addEventListener('click', () => {
 			switchTheme();
