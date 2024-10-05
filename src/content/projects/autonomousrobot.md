@@ -21,12 +21,12 @@ At the end of this course, teams face off in a live competition to see which rob
  - Every year's competition is livestreamed on YouTube! Embeds do not work unfortunately (copyrighted music), so **click the image below** to watch our year's competition! Our robot races at around 1:07:00 and 1:33:00. You can also scroll to the end of the page to see a gif.
 
 <div class="flex flex-row items-center">
-<figure class="bg-white size-fit rotate-1 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-1 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <a href="https://www.youtube.com/watch?v=gXMnazr8vEo"><img src="\images\robotcomp\youtube.png" class="bg-primary mb-1 size-fit "> </a>
 <figcaption class="pt-2 text-black text-xl text-center">click here to see the youtube video!</figcaption>
 </figure>
 
-<figure class="bg-white size-fit -rotate-6 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-6 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\delicious.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-xl text-center">our robot, named "deliciousness overload"</figcaption>
 </figure>
@@ -61,12 +61,12 @@ It's up to teams to decide which route they want to take, like using the IR beac
 #### DESIGNS
 Our initial designs were pretty complex, with lots of sensors and moving parts, but as we progressed through the design phase and moved to actually building the different parts, we figured it was best to keep things simple. With a solid driving foundation, the other features were not necessary and were minimized to avoid risks. 
 <div class="flex flex-row">
-<figure class="bg-slate-100 rotate-1 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 rotate-1 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\sensordesign.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">slides from our design proposal (1/2)</figcaption>
 </figure>
 
-<figure class="bg-slate-100 -rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 -rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\sensordesign2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">slides from our design proposal (2/2)</figcaption>
 </figure>
@@ -77,22 +77,22 @@ I made a rough claw prototype using an Arduino kit at home, programming a servo 
 
 <div class="flex flex-row">
 
-<figure class="bg-slate-100 size-fit rotate-1 pt-8 pb-4 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit rotate-1 pt-8 pb-4 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\clawPrototype.gif" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm"> arduino claw</figcaption>
 </figure>
 
-<figure class="bg-slate-100 size-fit mb-24 rotate-3 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit mb-24 rotate-3 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\robotProto.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">prototype chassis (1/2)</figcaption>
 </figure>
 
-<figure class="bg-slate-100 size-fit -rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit -rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\cardboardProto.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">ultrasonic sensor testing</figcaption>
 </figure>
 
-<figure class="bg-slate-100 size-fit mb-24 rotate-3 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit mb-24 rotate-3 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\robotProto2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">prototype chassis (2/2)</figcaption>
 </figure>
@@ -104,17 +104,17 @@ This was later developed into a CAD model on OnShape, after which we produced 2 
 
 <div class="flex flex-row">
 
-<figure class="bg-slate-100 size-fit rotate-1 pt-8 pb-4 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit rotate-1 pt-8 pb-4 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\robotwheel.gif" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">bottom of the robot; wheel mounts + steering system</figcaption>
 </figure>
 
-<figure class="bg-slate-100 size-fit mb-24 rotate-3 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit mb-24 rotate-3 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\robot360.gif" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">full chassis + circuitry layout; layers attached using stands</figcaption>
 </figure>
 
-<figure class="bg-slate-100 size-fit -rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit -rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\robotclawCAD.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">robot claw (scrapped)... those gears are so small...</figcaption>
 </figure>
@@ -122,7 +122,7 @@ This was later developed into a CAD model on OnShape, after which we produced 2 
 
 The laser-cutting machine was a highly sought after commodity throughout the course! We got a taste of cheap, high-speed factory production... this was the industrial revolution... I had taken a course on <a href="\metalphonestand">machine shop training</a> to prep for this, but the laser cutter was simply too convenient. 
 
-<figure class="bg-white size-fit  pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit  pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\assembly.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md">assembly of our first prototype, primarily made of laser-cut hardboard pieces</figcaption>
 </figure>
@@ -134,17 +134,17 @@ To drive around the course, we implemented a navigation system via tape followin
 
 <div class="flex flex-row">
 
-<figure class="bg-slate-100 size-fit rotate-1 pt-8 pb-4 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit rotate-1 pt-8 pb-4 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\breadboard.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">testing on a breadboard...</figcaption>
 </figure>
 
-<figure class="bg-slate-100 size-fit mb-24 -rotate-3 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit mb-24 -rotate-3 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\circuits.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">sensor circuit diagrams from our design slides</figcaption>
 </figure>
 
-<figure class="bg-slate-100 size-fit rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\solder.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">learning to solder (only mount fujis allowed)</figcaption>
 </figure>
@@ -162,12 +162,12 @@ Since most teams hadn't finished their driving systems yet, we were content with
 I don't have many good photos but during the last week, I added a bumper out of a metal sheet (with a smiley face!) that was fastened with zipties to our chassis. This helped the robot push away any blocks and potential magnetic bombs without tipping them over (which would cause them to blow up), also provided some level of protection for the sensors against collisions.
 
 <div class="flex flex-row items-center">
-<figure class="bg-slate-100 size-fit rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\bumper.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">a last-minute addition; bumper plate made out of scrap sheet metal and a tongue/feet made of plastic to help scrape away potential bombs... also some drawings for extra style(?) points</figcaption>
 </figure>
 
-<figure class="bg-slate-100 size-fit -rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit -rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\labelleddiagram.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">final diagram with all the major components</figcaption>
 </figure>
@@ -178,11 +178,11 @@ I don't have many good photos but during the last week, I added a bumper out of 
 Alas, competition day came (once again, available on YouTube <a href="https://www.youtube.com/watch?v=gXMnazr8vEo">here</a>). Our robot performed wonderfully and I'm happy to say that our team's robot made it past the group stage and into the finals! It was definitely a fun learning experience and I send my appreciation to the lab instructors, who supported us throughout the process. 
 
 <div class="flex flex-row items-center">
-<figure class="bg-slate-100 size-fit rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit rotate-2 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\final.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">deliciousness overload, minutes before competing in UBC's HEBB theatre</figcaption>
 </figure>
-<figure class="bg-slate-100 size-fit -rotate-4 pt-8 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-slate-100 size-fit -rotate-4 pt-8 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\robotcomp\driving.gif" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-sm">deliciousness overload speeding through the tracks!</figcaption>
 </figure>

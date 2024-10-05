@@ -25,15 +25,15 @@ During my coop term in 2023, I took the Student Machine Shop course at UBC, cons
 Throughout each module, we constructed part of a phone stand (CAD model details were provided to us), gaining hands-on experience with the machinery and processes that comes with manufacturing simple designs like this. The end product was an adjustable phone stand that is probably more durable than anything else on the market and weighs quite a bit (and it folds up!) That, and of course, beginner knowledge/familiarity with common machine-shop tools like the lathe, mill, and waterjet cutter.
 
 <div class="flex flex-row items-center">
-<figure class="bg-white size-fit rotate-6 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-6 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\phonestand\folded1.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">folded position 1</figcaption>
 </figure>
-<figure class="bg-white size-fit rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\phonestand\standing.jpg" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">a hefty phonestand.. not much to say.. contact if you want one made (for a large fee) :> </figcaption>
 </figure>
-<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\phonestand\folded2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">folded position 2</figcaption>
 </figure>

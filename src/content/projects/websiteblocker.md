@@ -57,7 +57,7 @@ However, this user would very much like to use the blocked website, so they sele
 <img src="\images\extension\scroll.gif" class="bg-primary mb-1 size-fit outline-purple rounded-xl ">
 
 <div class="flex flex-row items-center">
-<figure class="bg-white w-1/2 rotate-0 p-6 items-center justify-center hover:scale-150">
+<figure class="bg-white w-1/2 rotate-0 p-6 items-center justify-center hover:scale-105">
 <img src="\images\extension\scroll.png" class="bg-primary mb-1 size-fit ">
 <figcaption>final redirect confirmation page</figcaption>
 </figure>
@@ -92,7 +92,7 @@ All of the images (the wizard, scroll, etc.) were drawn using https://www.pixila
 
 The Figma draft prototype was also a great way to visualize the design I wanted for the extension. It seems half the trouble in working with HTML and CSS is knowing what kind of design you want. By using a resource like Figma, it makes things much simpler, as you're able to drag/drop items to rearrange into a design you like and view their code properties in the developer mode.
 
-<figure class="bg-white size-fit rotate-0 p-6 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-0 p-6 items-center justify-center hover:scale-105">
 <img src="\images\extension\figma.png" class="bg-primary mb-1 size-fit ">
 <figcaption class='text-xl'>a screenshot from the figma draft</figcaption>
 </figure>

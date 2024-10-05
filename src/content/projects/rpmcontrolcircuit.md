@@ -16,7 +16,7 @@ tags: ['2022','circuit analysis', 'lab equipment']
 # THE CIRCUIT
 As the last project in ENPH 29: Experimental Techniques, students build a circuit capable of controlling a motor's rpm via a potentiometer. Though it is a simple concept, the construction helped develop skills in circuit analysis, debugging, familiarity with lab tools and electronics concepts. The rest of the post includes a description of the circuit and the building process taken from my final lab report.
 
-<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\wholeCircuit.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">circuit schematic for the final project </figcaption>
 </figure>
@@ -34,7 +34,7 @@ The circuit is divided into 5 main components:
 
 The first part of the circuit students build is the latch and reset generator; square wave oscillators that lets the D-latch store and reset counter outputs:
 
-<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\part1.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">circuit schematic for the latch and reset generator </figcaption>
 </figure>
@@ -44,7 +44,7 @@ The first part of the circuit students build is the latch and reset generator; s
 Here, a Schmitt Trigger inverter and RC setup generates a square wave pulse to be used as our "measuring period", or CLK pulse for the latch that stores our counter output. 
 
 
-<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\1a.AD2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center"> oscilloscope reading of the clk pulse </figcaption>
 </figure>
@@ -60,12 +60,12 @@ Now our output from a) is fed into the latch and a delay circuit. This uses anot
 A delay of around 11 microseconds is observed during discharge; the left cursor covers the input rising edge while the right cursor covers the output rising edge.
 
 <div class="flex flex-row items-center">
-<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\1b.AD2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center"> oscilloscope reading of the input (blue) and output (yellow) square wave </figcaption>
 </figure>
 
-<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\1b.calc.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center"> logbook calculations for expected delays during charging/discharging (hover for zoom)</figcaption>
 </figure>
@@ -77,7 +77,7 @@ The delayed square wave is passed through another RC circuit, this time in a hig
 
 Only at the rising edge of the delayed square wave is there a pulse, as the capacitor charges quickly, crossing the trigger threshold and changing states, before discharging quickly and changing states again, creating this small 'pulse' shape. This is originally a falling-> rising -> falling edge, but the second Schmitt Trigger reverses the polarity of the output to match our original latch polarity, and we get our reset pulse.
 
-<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\1c.AD2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center"> oscilloscope reading of our original latch signal (undelayed) in blue, and the reset pulse in yellow; notice the 11 microsecond delay introduced from b)</figcaption>
 </figure>
@@ -86,11 +86,11 @@ Only at the rising edge of the delayed square wave is there a pulse, as the capa
 The circuit / schematic I made for the latch and reset generator:
 
 <div class="flex flex-row items-center">
-<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\part1Circuit.png" class="bg-primary mb-1 size-fit ">
 </figure>
 
-<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\part1schematic.png" class="bg-primary mb-1 size-fit ">
 </figure>
 </div>
@@ -100,7 +100,7 @@ The circuit / schematic I made for the latch and reset generator:
 
 This portion of the circuit counts the number of clock pulses between reset pulses, storing the result before converting it to an analog voltage value. 
 
-<figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\part2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">counter, dlatch and dac converter schematic</figcaption>
 </figure>
@@ -112,11 +112,11 @@ First we built an 8-bit counter that counts from 0 to 255 (2^8 - 1), testing its
 Constructed circuit and schematic:
 
 <div class="flex flex-row items-center">
-<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\2a.circuit.png" class="bg-primary mb-1 size-fit ">
 </figure>
 
-<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\2a.schematic.png" class="bg-primary mb-1 size-fit ">
 </figure>
 </div>
@@ -131,11 +131,11 @@ The buffer in the DAC helps to protect against the effects of loading from the r
 
 
 <div class="flex flex-row items-center">
-<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\2b.circuit.png" class="bg-primary mb-1 size-fit ">
 </figure>
 
-<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\2b.schematic.png" class="bg-primary mb-1 size-fit ">
 </figure>
 </div>
@@ -145,7 +145,7 @@ Note: The way I have wired the counter will result in a display with reversed ta
 # 3. Motor Sensor and Motor Driver
 With much of the circuit complete, we began to set up the motor itself, with the following circuit (by passing the power transistor in the final circuit as we have not yet set up the error amplifier and buffer)
 
-<figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\part3.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center"></figcaption>
 </figure>
@@ -153,12 +153,12 @@ With much of the circuit complete, we began to set up the motor itself, with the
 I first wired the circuit without including the motor, testing the phototransistor operation when manually spinning the disc.
 
 <div class="flex flex-row items-center">
-<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\3a.circuit.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center"> circuit schematic </figcaption>
 </figure>
 
-<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\3a.ad2.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center"> oscilloscope reading of phototransistor output while spinning the disc manually</figcaption>
 </figure>
@@ -168,7 +168,7 @@ These are dips rather than pulses, so an inverter is used to 'flip' the signal b
 
 With the phototransistor confirmed to be working, I wired the rest of the motor up, let it run with a constant speed and probed the new output with the oscilloscope:
 
-<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\3b.ad2.png" class="bg-primary mb-1 size-fit ">
 </figure>
 
@@ -180,7 +180,7 @@ We can finally complete the feedback circuit by assembling the error signal ampl
 
 The circuit schematic for this section:
 
-<figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\part4.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center"></figcaption>
 </figure>
@@ -197,7 +197,7 @@ The reason we need this buffer is to protect the MJF122 power transistor, a BJT 
 
 With these components in place, the circuit is complete!
 
-<figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\fullcircuit.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">fully wired circuit</figcaption>
 </figure>
@@ -216,7 +216,7 @@ To show the relationship between the set voltage and the 7 segment display, we u
 
 I started by finding the lowest voltage across the potentiometer that could cause the motor to rotate.
 
-<figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-150">
+<figure class="bg-white size-fit -rotate-0 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
 <img src="\images\servo\finalAD2.1.png" class="bg-primary mb-1 size-fit ">
 <figcaption class="pt-2 text-black text-md text-center">oscilloscope reading of potentiometer voltage</figcaption>
 </figure>
