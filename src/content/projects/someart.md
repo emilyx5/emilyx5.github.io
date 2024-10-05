@@ -36,7 +36,7 @@ note: a lot of these are studies from pictures! feel free to contact me for any 
 </figure>
 
 <figure class="bg-white size-fit rotate-0 p-4 m-4 items-center justify-center hover:scale-105">
-<img src="\images\artwork\charcoalback.jpg" class="bg-primary mb-1 size-1/2 ">
+<img src="\images\artwork\charcoalback.jpg" class="bg-primary mb-1 size-fit ">
 <figcaption class='text-md'>ignore the homework on the paper</figcaption>
 </figure>
 
@@ -60,8 +60,8 @@ note: a lot of these are studies from pictures! feel free to contact me for any 
 
 </div>
 
-<figure class="bg-white size-fit rotate-0 p-4 m-4 items-center justify-center hover:scale-105">
-<img src="\images\artwork\graphite1.jpg" class="bg-primary mb-1 size-1/2 ">
+<figure class="bg-white size-3/4 rotate-0 p-4 m-4 items-center justify-center hover:scale-105">
+<img src="\images\artwork\graphite1.jpg" class="bg-primary mb-1 size-fit ">
 <figcaption class='text-md'>i'll finish this one day.. ? maybe<figcaption>
 </figure>
 
@@ -104,8 +104,8 @@ note: a lot of these are studies from pictures! feel free to contact me for any 
 </figure>
 </div>
 
-<figure class="bg-white size-fit rotate-0 p-4 m-4 items-center justify-center hover:scale-105">
-<img src="\images\artwork\graphiteanatomy1.jpg" class="bg-primary mb-1 size-3/4 ">
+<figure class="bg-white size-3/4 rotate-0 p-4 m-4 items-center justify-center hover:scale-105">
+<img src="\images\artwork\graphiteanatomy1.jpg" class="bg-primary mb-1 size-fit ">
 <figcaption class='text-md'>do NOT look too long at the proportions on these...</figcaption>
 </figure>
 
@@ -127,8 +127,8 @@ note: a lot of these are studies from pictures! feel free to contact me for any 
 
 ## Digital Drawings
 
-<figure class="bg-white size-fit rotate-0 p-4 m-4 items-center justify-center hover:scale-105">
-<img src="\images\artwork\spaceguywallpaper.png" class="bg-primary mb-1 size-1/2 ">
+<figure class="bg-white size-3/4 rotate-0 p-4 m-4 items-center justify-center hover:scale-105">
+<img src="\images\artwork\spaceguywallpaper.png" class="bg-primary mb-1 size-fit ">
 <figcaption class='text-md'>made a phone wallpaper inspired by a pinterest drawing</figcaption>
 </figure>
 
