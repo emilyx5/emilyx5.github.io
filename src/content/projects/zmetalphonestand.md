@@ -26,15 +26,15 @@ Throughout each module, we constructed part of a phone stand (CAD model details 
 
 <div class="flex flex-row items-center">
 <figure class="bg-white size-fit rotate-6 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
-<img src="\images\phonestand\folded1.png" class="bg-primary mb-1 size-fit ">
+<img src="\images\phonestand\folded1.png" class="bg-primary mb-1 w-full h-auto ">
 <figcaption class="pt-2 text-black text-md text-center">folded position 1</figcaption>
 </figure>
 <figure class="bg-white size-fit rotate-3 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
-<img src="\images\phonestand\standing.jpg" class="bg-primary mb-1 size-fit ">
+<img src="\images\phonestand\standing.jpg" class="bg-primary mb-1 w-full h-auto ">
 <figcaption class="pt-2 text-black text-md text-center">a hefty phonestand.. not much to say.. contact if you want one made (for a large fee) :> </figcaption>
 </figure>
 <figure class="bg-white size-fit -rotate-2 pt-2 pb-8 p-4 items-center justify-center hover:scale-105">
-<img src="\images\phonestand\folded2.png" class="bg-primary mb-1 size-fit ">
+<img src="\images\phonestand\folded2.png" class="bg-primary mb-1 w-full h-auto ">
 <figcaption class="pt-2 text-black text-md text-center">folded position 2</figcaption>
 </figure>
 </figure>
